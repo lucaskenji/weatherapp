@@ -1,5 +1,5 @@
 const getWeatherData = async (locationName) => {
-	const API_KEY = 'insert api key here';
+	const API_KEY = process.env.REACT_APP_API_KEY;
 	const stringApi = 'http://api.openweathermap.org/data/2.5/weather?q=' + locationName + '&appid=' + API_KEY + '&units=metric';
 	
 	try {

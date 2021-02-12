@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.css';
 import WeatherDisplay from './components/WeatherDisplay.jsx';
-
 import getWeatherData from './utils/getWeatherData.js';
 
 class App extends React.Component {

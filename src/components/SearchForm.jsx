@@ -10,7 +10,7 @@ function SearchForm(props) {
 					<button type='submit' className='submit-btn'>Search</button>
 					
 					<div id='my-info'>
-						<a target='blank' href='https://github.com/lucaskenji'>my github</a> / <a target='blank' href='https://www.theodinproject.com'>the odin project</a>
+						<a target='blank' rel="noopener noreferrer" href='https://github.com/lucaskenji'>my github</a> / <a target='blank' rel="noopener noreferrer" href='https://www.theodinproject.com'>the odin project</a>
 					</div>
 				</form>
 			</div>
