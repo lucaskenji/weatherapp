@@ -1,0 +1,288 @@
+html, body {
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: none;
+}
+
+#background-container {
+	background-color: #262626;
+	transition: opacity 1s;
+	opacity: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.fades-out {
+	opacity: 0 !important;
+}
+
+.fades-in {
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.drop-div {
+	animation-name: dropDiv;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+#app-title {
+	font-family: 'Syne', sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 35px;
+}
+
+#app-title h1 {
+	text-shadow: 2px 2px 3px black;
+}
+
+#my-info {
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+}
+
+/* Search form */
+
+#search-form {
+	width: 80%;
+}
+
+#search-form input {
+	font-family: 'Syne', sans-serif;
+}
+
+.search-bar {
+	border-radius: 15px;
+	outline: 0;
+	border: 0;
+	box-shadow: 0 0 5px black;
+	width: 100%;
+	height: 25px;
+	font-size: 20px;
+	padding-left: 1%;
+}
+
+.submit-btn {
+	font-family: 'Syne', sans-serif;
+	margin: 0 auto 0 auto;
+	display: block;
+	background-color: #262626;
+	color: white;
+	outline: 0;
+	border: 0;
+	width: 150px;
+	height: 25px;
+	font-size: 20px;
+	border-radius: 15px;
+	margin-top: 15px;
+}
+
+.submit-btn:hover {
+	cursor: pointer;
+}
+
+.error-message {
+	color: red;
+	margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Weather display */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
+
+#weather-display {
+	width: 60%;
+	margin-left: 20%;
+	height: 300px;
+	border-radius: 24px;
+	background-color: #fcfcfc;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Syne', sans-serif;
+	margin-bottom: 50px;
+	box-shadow: 2px 2px 5px gray;
+}
+
+#weather-location {
+	font-size: 54px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#weather-return {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+#weather-details {
+	display: flex;
+	flex-direction: row;
+}
+
+#weather-main {
+	display: flex;
+	flex-direction: row;
+	margin-right: 30px;
+	align-items: center;
+}
+
+#weather-other {
+	margin-left: 30px;
+}
+
+#weather-temp {
+	font-size: 40px;
+}
+
+#weather-temp {
+	cursor: pointer;
+}
+
+#weather-name {
+	font-size: 30px;	
+}
+
+#weather-other {
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+#weather-tooltip {
+	text-align: center;
+	opacity: 0;
+	height: 0;
+	transition: opacity .5s, height .5s;
+}
+
+#weather-full-temp:hover #weather-tooltip {
+	opacity: 1;
+	height: 10px;
+}
+
+@keyframes dropDiv {
+	0% {
+		margin-bottom: 100px;
+		opacity: 0;
+	}
+	100% {
+		margin-bottom: 0;
+		opacity: 1;
+	}
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+	#weather-details {
+		flex-direction: column;
+	}
+	
+	#weather-location {
+		font-size: 40px;
+	}
+	
+	#weather-temp {
+		font-size: 25px;
+	}
+	
+	#weather-name {
+		font-size: 18px;
+	}
+	
+	#weather-other {
+		font-size: 15px;
+	}
+}
+
+/* Background classes */
+
+.weather-class-Thunderstorm {
+	background: linear-gradient(110deg, #1a1a1a, #292960);
+}
+
+.weather-class-Drizzle {
+	background: linear-gradient(110deg, #a7b4d3, #525766);
+}
+
+.weather-class-Rain {
+	background: linear-gradient(110deg, #828aa1, #404554);
+}
+
+.weather-class-Snow {
+	background: linear-gradient(110deg, #e6e6e6, #89b8e1);
+}
+
+.weather-class-Mist {
+	background: linear-gradient(110deg, #ff6600, #cc0052);
+}
+
+.weather-class-Smoke {
+	background: linear-gradient(110deg, #ff6600, #cc0052);
+}
+
+.weather-class-Haze {
+	background: linear-gradient(110deg, #ff6600, #cc0052);
+}
+
+.weather-class-Dust {
+	background: linear-gradient(110deg, #ff6600, #cc0052);
+}
+
+.weather-class-Fog {
+	background: linear-gradient(110deg, #ff6600, #cc0052);
+}
+
+.weather-class-Sand {
+	background: linear-gradient(110deg, #ff6600, #cc0052);
+}
+
+.weather-class-Dust {
+	background: linear-gradient(110deg, #ff6600, #cc0052);
+}
+
+.weather-class-Ash {
+	background: linear-gradient(110deg, #ff6600, #cc0052);
+}
+
+.weather-class-Squall {
+	background: linear-gradient(110deg, #ff6600, #cc0052);
+}
+
+.weather-class-Tornado {
+	background: linear-gradient(110deg, #ff6600, #cc0052);
+}
+
+.weather-class-Clear {
+	background: linear-gradient(110deg, #9ac1ff, #608cd2);
+}
+
+.weather-class-Clouds {
+	background: linear-gradient(110deg, #9ac1ff, #e3e5e8);
+}
